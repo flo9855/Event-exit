@@ -1,0 +1,15 @@
+[
+  {
+    "id": "ev-001",
+    "title": "Sommerkonzert",
+    "start": "2025-09-20T19:30:00+02:00",
+    "venueId": "stadthalle-marburg",
+    "url": "https://example.com/tickets"
+  },
+  {
+    "id": "ev-002",
+    "title": "Rock Night",
+    "start": "2025-10-04T20:00:00+02:00",
+    "venueId": "wembley"
+  }
+]

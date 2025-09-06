@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Event App</title>
+  <meta name="description" content="Einfache Event-App mit Auswahl des Veranstaltungsortes (Venue)." />
+  <style>
+    :root { --gap: 12px; }
+    * { box-sizing: border-box; }
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 16px; }
+    header { display: flex; gap: var(--gap); align-items: center; flex-wrap: wrap; }
+    h1 { margin: 0; font-size: 1.5rem; }
+    label { display: inline-flex; align-items: center; gap: 6px; }
+    select, input { padding: 8px 10px; border: 1px solid #ddd; border-radius: 8px; }
+    .row { display: grid; grid-template-columns: 1fr; gap: var(--gap); margin-top: var(--gap); }
+    @media (min-width: 720px) { .row { grid-template-columns: 1fr 1fr; } }
+    .card { padding: 12px; border: 1px solid #e6e6e6; border-radius: 12px; background: #fff; }
+    .muted { color: #666; font-size: .9rem; }
+    .event { display: grid; gap: 6px; }
+    .event h3 { margin: 0 0 4px; font-size: 1.05rem; }
+    .empty { padding: 24px; text-align: center; border: 2px dashed #ddd; border-radius: 12px; }
+    footer { margin-top: 20px; color: #666; font-size: .85rem; }
+    a { text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Events</h1>
+    <label>Ort:
+      <select id="venueSelect">
+        <option value="">Alle Orte</option>
+      </select>
+    </label>
+    <input id="q" placeholder="Suche (Titel/Ort/Adresse)" aria-label="Suche" />
+    <span id="status" class="muted" aria-live="polite"></span>
+  </header>
+
+  <section class="row">
+    <div class="card">
+      <h2 style="margin-top:0">Kommende Events</h2>
+      <div id="list"></div>
+    </div>
+    <div class="card">
+      <h2 style="margin-top:0">Ort-Info</h2>
+      <div id="venueInfo" class="muted">Wähle einen Ort aus, um Details zu sehen.</div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Statisch, läuft auf GitHub Pages. Daten aus <code>./data/venues.json</code> und <code>./data/events.json</code>.</p>
+  </footer>
+
+  <script type="module" src="./main.js"></script>
+</body>
+</html>

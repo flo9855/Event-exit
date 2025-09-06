@@ -1,0 +1,24 @@
+[
+  {
+    "id": "stadthalle-marburg",
+    "name": "Stadthalle Marburg",
+    "address": "Biegenstraße 15, 35037 Marburg",
+    "lat": 50.8134,
+    "lng": 8.7709,
+    "tags": [
+      "konzert",
+      "theater"
+    ]
+  },
+  {
+    "id": "wembley",
+    "name": "Wembley Stadium",
+    "address": "London, UK",
+    "lat": 51.556,
+    "lng": -0.2796,
+    "tags": [
+      "sport",
+      "konzert"
+    ]
+  }
+]
